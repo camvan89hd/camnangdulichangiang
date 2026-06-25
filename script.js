@@ -236,7 +236,9 @@ function xemChiTiet(key) {
     <button class="btn-audio" onclick="ngheThuyetMinh('${key}')">
       🔊 English Audio Guide
     </button>
-
+<button class="btn-stop" onclick="dungThuyetMinh()">
+  ⏹ Stop Audio
+</button>
     <div class="map-box">
       <iframe src="${data.bando}" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
@@ -256,19 +258,51 @@ function doiAnh(step) {
   document.getElementById("slideImage").src = diaDiemHienTai.images[slideIndex];
 }
 
+let hangDoiDoc = [];
+let dangDoc = false;
+
 function ngheThuyetMinh(key) {
-  const data = duLieu[key];
-  if (!data) return;
+    const data = duLieu[key];
 
-  window.speechSynthesis.cancel();
+    if (!data) {
+        alert("No information available.");
+        return;
+    }
 
-  const speech = new SpeechSynthesisUtterance(data.audio_en);
-  speech.lang = "en-US";
-  speech.rate = 1;
-  speech.pitch = 1;
-  speech.volume = 1;
+    window.speechSynthesis.cancel();
 
-  speechSynthesis.speak(speech);
+    hangDoiDoc = data.audio_en
+        .split(".")
+        .map(cau => cau.trim())
+        .filter(cau => cau.length > 0);
+
+    dangDoc = true;
+    docTiepTheo();
+}
+
+function docTiepTheo() {
+    if (!dangDoc || hangDoiDoc.length === 0) {
+        dangDoc = false;
+        return;
+    }
+
+    const cau = hangDoiDoc.shift() + ".";
+
+    const speech = new SpeechSynthesisUtterance(cau);
+    speech.lang = "en-US";
+    speech.rate = 0.9;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    speech.onend = function () {
+        docTiepTheo();
+    };
+
+    speech.onerror = function () {
+        docTiepTheo();
+    };
+
+    window.speechSynthesis.speak(speech);
 }
 
 function timKiemDiaDiem() {
@@ -335,5 +369,9 @@ function xemDiem() {
 function lenDauTrang() {
   window.scrollTo({top:0,behavior:"smooth"});
 }
-
+function dungThuyetMinh() {
+    dangDoc = false;
+    hangDoiDoc = [];
+    window.speechSynthesis.cancel();
+}
 
