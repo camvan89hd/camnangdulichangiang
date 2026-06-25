@@ -350,3 +350,10 @@ footer{
     height:240px;
   }
 }
+.btn-stop{
+    background:#d32f2f;
+}
+
+.btn-stop:hover{
+    background:#b71c1c;
+}
