@@ -261,7 +261,7 @@ function ngheThuyetMinh(key) {
 
   const speech = new SpeechSynthesisUtterance(data.audio_en);
   speech.lang = "en-US";
-  speech.rate = 0.9;
+  speech.rate = 1;
   speech.pitch = 1;
   speech.volume = 1;
 
