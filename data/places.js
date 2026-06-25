@@ -1,1 +1,171 @@
-// Dữ liệu địa điểm du lịch sẽ được chuyển vào đây ở bước tiếp theo
+const duLieu = {
+  "mieu-ba-chua-xu": {
+    ten: "Miếu Bà Chúa Xứ Núi Sam",
+    anh: "mieu-ba-chua-xu.jpg",
+    images: ["mieu-ba-chua-xu.jpg", "mieu-ba-chua-xu-2.jpg", "mieu-ba-chua-xu-3.jpg"],
+    diachi: "Phường Châu Đốc, An Giang",
+    loaihinh: "Du lịch tâm linh",
+    mota: "Miếu Bà Chúa Xứ Núi Sam là điểm hành hương nổi tiếng của Nam Bộ, thu hút đông đảo du khách đến tham quan, chiêm bái và tìm hiểu văn hóa tín ngưỡng dân gian.",
+    diemnoibat: "Kiến trúc trang nghiêm, không gian linh thiêng, gắn với Lễ hội Vía Bà Chúa Xứ Núi Sam.",
+    giave: "Miễn phí",
+    giomo: "05:00 - 22:00",
+    amthuc: "Bún cá Châu Đốc, mắm Châu Đốc, bánh bò thốt nốt",
+    khachsan: "Victoria Châu Đốc, Marina Plaza Hotel",
+    goiy: "Nên kết hợp tham quan Lăng Thoại Ngọc Hầu, Tây An Cổ Tự và khu vực Núi Sam.",
+    audio_en: "Welcome to Ba Chua Xu Temple on Sam Mountain, one of the most famous spiritual destinations in Southern Vietnam. Located at the foot of Sam Mountain in Chau Doc, An Giang, this sacred temple welcomes many visitors every year. People come here to pray for health, peace, happiness, and success, and also to learn about the spiritual culture of the Mekong Delta. The temple is known for its traditional architecture, peaceful atmosphere, and the annual Ba Chua Xu Festival. When visiting this destination, you can also explore nearby places such as Tay An Pagoda, Thoai Ngoc Hau Mausoleum, and Sam Mountain. Local foods such as Chau Doc fish noodle soup, palm sugar cakes, and fermented fish products are also worth trying. Thank you for using the Smart An Giang Travel Guide. We hope you enjoy your visit and have a wonderful journey.",
+    bando: "https://www.google.com/maps?q=Miếu%20Bà%20Chúa%20Xứ%20Núi%20Sam&output=embed"
+  },
+
+  "rung-tram-tra-su": {
+    ten: "Rừng tràm Trà Sư",
+    anh: "rung-tram-tra-su.jpg",
+    images: ["rung-tram-tra-su.jpg", "rung-tram-tra-su-2.jpg", "rung-tram-tra-su-3.jpg"],
+    diachi: "Văn Giáo, Tịnh Biên, An Giang",
+    loaihinh: "Du lịch sinh thái",
+    mota: "Rừng tràm Trà Sư là khu rừng ngập nước tiêu biểu của miền Tây, nổi bật với hệ sinh thái phong phú và cảnh quan xanh mát.",
+    diemnoibat: "Đi xuồng xuyên rừng tràm, ngắm thảm bèo xanh, quan sát chim trời và tận hưởng không khí thiên nhiên trong lành.",
+    giave: "Khoảng 100.000 - 200.000 đồng/người",
+    giomo: "07:00 - 17:00",
+    amthuc: "Cá lóc nướng trui, lẩu mắm, gà đồi",
+    khachsan: "Khách sạn Tịnh Biên, Victoria Núi Sam",
+    goiy: "Đẹp nhất vào mùa nước nổi từ tháng 9 đến tháng 11.",
+    audio_en: "Welcome to Tra Su Cajuput Forest, one of the most beautiful ecological destinations in An Giang. This forest is famous for its peaceful green landscape, cajuput trees, birds, fish, and the unique wetland ecosystem of the Mekong Delta. Visitors can travel by boat through narrow waterways covered with green duckweed and enjoy the fresh air of nature. Tra Su is not only a tourist attraction but also an ideal place for students to learn about biodiversity, environmental protection, and local life. The best time to visit is during the floating season, from September to November. Do not forget to try local dishes such as grilled snakehead fish and traditional Mekong Delta hotpot. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Rừng%20tràm%20Trà%20Sư&output=embed"
+  },
+
+  "nui-cam": {
+    ten: "Núi Cấm",
+    anh: "nui-cam.jpg",
+    images: ["nui-cam.jpg", "nui-cam-2.jpg", "nui-cam-3.jpg"],
+    diachi: "Xã An Hảo, Tịnh Biên, An Giang",
+    loaihinh: "Du lịch sinh thái - tâm linh",
+    mota: "Núi Cấm là ngọn núi nổi bật của vùng Bảy Núi, được mệnh danh là nóc nhà miền Tây.",
+    diemnoibat: "Tượng Phật Di Lặc, hồ Thủy Liêm, cáp treo, khí hậu mát mẻ và phong cảnh núi non hùng vĩ.",
+    giave: "Vé cáp treo khoảng 180.000 đồng",
+    giomo: "06:00 - 18:00",
+    amthuc: "Gà đốt Ô Thum, bò Bảy Núi",
+    khachsan: "Khách sạn Núi Cấm, Victoria Núi Sam",
+    goiy: "Nên đi vào mùa khô để thuận tiện tham quan và chụp ảnh.",
+    audio_en: "Welcome to Cam Mountain, also known as the roof of the Mekong Delta. This destination is one of the most impressive mountains in An Giang and the Seven Mountains region. Cam Mountain is famous for its cool climate, beautiful natural scenery, cable car system, and spiritual attractions. Visitors can see the giant Maitreya Buddha statue, Thuy Liem Lake, temples, and panoramic views of the surrounding countryside. This is a suitable place for sightseeing, relaxation, spiritual travel, and nature exploration. Local food such as grilled chicken and beef from the Seven Mountains area is highly recommended. Thank you for using the Smart An Giang Travel Guide. We hope you enjoy your journey.",
+    bando: "https://www.google.com/maps?q=Núi%20Cấm%20An%20Giang&output=embed"
+  },
+
+  "cho-noi-long-xuyen": {
+    ten: "Chợ nổi Long Xuyên",
+    anh: "cho-noi-long-xuyen.jpg",
+    images: ["cho-noi-long-xuyen.jpg", "cho-noi-long-xuyen-2.jpg", "cho-noi-long-xuyen-3.jpg"],
+    diachi: "Phường Mỹ Long, Long Xuyên, An Giang",
+    loaihinh: "Du lịch văn hóa",
+    mota: "Chợ nổi Long Xuyên thể hiện nét văn hóa sông nước đặc trưng của miền Tây Nam Bộ.",
+    diemnoibat: "Hoạt động mua bán trên sông, trải nghiệm đời sống người dân và thưởng thức món ăn dân dã trên ghe.",
+    giave: "Miễn phí",
+    giomo: "05:00 - 09:00",
+    amthuc: "Hủ tiếu ghe, cà phê ghe, bún riêu",
+    khachsan: "Dong Xuyen Hotel, Chau Khuong Hotel",
+    goiy: "Nên đi từ 5h đến 7h sáng để cảm nhận không khí nhộn nhịp.",
+    audio_en: "Welcome to Long Xuyen Floating Market, a cultural symbol of river life in the Mekong Delta. Unlike modern markets on land, this market takes place on boats and small vessels. Early in the morning, local people gather on the river to buy and sell fruits, vegetables, food, and drinks. Visitors can enjoy a simple but memorable experience by traveling on a boat, drinking coffee, eating noodle soup, and observing daily life on the water. Long Xuyen Floating Market is not only a place for trade but also a living museum of southern river culture. The best time to visit is from five to seven in the morning. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Chợ%20nổi%20Long%20Xuyên&output=embed"
+  },
+
+  "ho-ta-pa": {
+    ten: "Hồ Tà Pạ",
+    anh: "ho-ta-pa.jpg",
+    images: ["ho-ta-pa.jpg", "ho-ta-pa-2.jpg", "ho-ta-pa-3.jpg"],
+    diachi: "Tri Tôn, An Giang",
+    loaihinh: "Du lịch sinh thái",
+    mota: "Hồ Tà Pạ nổi bật với mặt nước xanh trong, cảnh quan yên bình và không gian thơ mộng.",
+    diemnoibat: "Khung cảnh đẹp, thích hợp chụp ảnh, thư giãn và kết hợp khám phá vùng Bảy Núi.",
+    giave: "Miễn phí",
+    giomo: "Mở cửa cả ngày",
+    amthuc: "Bánh xèo núi, bò Bảy Núi",
+    khachsan: "Nhà nghỉ Tri Tôn, Khách sạn Tịnh Biên",
+    goiy: "Đẹp nhất vào buổi sáng hoặc chiều mát.",
+    audio_en: "Welcome to Ta Pa Lake, a peaceful and beautiful destination in Tri Ton, An Giang. The lake is well known for its clear blue water, quiet atmosphere, and surrounding mountain scenery. Many visitors call it a hidden gem of the Seven Mountains area. Ta Pa Lake is a wonderful place for photography, relaxation, and enjoying nature. It is also a good destination for young people and students who want to explore the beauty of their homeland. When visiting this area, you can combine the trip with nearby rice fields, local villages, and other attractions in Tri Ton. The best time to come is in the morning or late afternoon. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Hồ%20Tà%20Pạ&output=embed"
+  },
+
+  "chua-hang": {
+    ten: "Chùa Hang",
+    anh: "chua-hang.jpg",
+    images: ["chua-hang.jpg", "chua-hang-2.jpg", "chua-hang-3.jpg"],
+    diachi: "Kiên Lương, An Giang",
+    loaihinh: "Du lịch tâm linh",
+    mota: "Chùa Hang là điểm đến tâm linh gắn với hang đá tự nhiên, núi đá và cảnh quan yên bình.",
+    diemnoibat: "Không gian thanh tịnh, kiến trúc tôn giáo hài hòa với thiên nhiên và tầm nhìn đẹp ra vùng biển Kiên Lương.",
+    giave: "Miễn phí",
+    giomo: "06:00 - 18:00",
+    amthuc: "Hải sản Kiên Lương",
+    khachsan: "River Hotel Hà Tiên, Sele House",
+    goiy: "Nên kết hợp tham quan Hòn Phụ Tử và các điểm ven biển gần đó.",
+    audio_en: "Welcome to Hang Pagoda in Kien Luong. This spiritual destination is connected with natural caves, limestone mountains, and a peaceful atmosphere. Visitors come here to pray, enjoy the quiet environment, and admire the beautiful combination of religious architecture and natural scenery. From this area, you can also see impressive views of the sea and nearby limestone formations. Hang Pagoda is suitable for families, students, and tourists who want to learn about local culture and spiritual life. A visit to Hang Pagoda can be combined with Hon Phu Tu and other coastal attractions in Kien Luong. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Chùa%20Hang%20Kiên%20Lương&output=embed"
+  },
+
+  "hon-phu-tu": {
+    ten: "Hòn Phụ Tử",
+    anh: "hon-phu-tu.jpg",
+    images: ["hon-phu-tu.jpg", "hon-phu-tu-2.jpg", "hon-phu-tu-3.jpg"],
+    diachi: "Kiên Lương, An Giang",
+    loaihinh: "Du lịch danh lam thắng cảnh",
+    mota: "Hòn Phụ Tử là danh thắng nổi tiếng vùng Kiên Lương, gắn với cảnh quan biển núi và truyền thuyết dân gian.",
+    diemnoibat: "Vẻ đẹp biển đảo, núi đá ven biển và câu chuyện truyền thuyết cảm động.",
+    giave: "Miễn phí",
+    giomo: "Mở cửa cả ngày",
+    amthuc: "Ghẹ Hà Tiên, mực nướng, hải sản Kiên Lương",
+    khachsan: "River Hotel Hà Tiên, Mũi Nai Resort",
+    goiy: "Thích hợp ngắm bình minh, hoàng hôn và kết hợp tham quan Chùa Hang.",
+    audio_en: "Welcome to Hon Phu Tu, a famous scenic spot in Kien Luong. This destination is known for its sea view, limestone rocks, and local legend about family love. For many years, Hon Phu Tu has been considered a symbol of the coastal area of Kien Luong and Ha Tien. Visitors can enjoy the fresh sea breeze, take photos, and learn about the story behind the name of this attraction. The landscape combines mountains, rocks, and the sea, creating a special beauty of southwestern Vietnam. You can also visit Hang Pagoda and enjoy fresh seafood nearby. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Hòn%20Phụ%20Tử%20Kiên%20Lương&output=embed"
+  },
+
+  "hang-mo-so": {
+    ten: "Hang Mo So",
+    anh: "hang-mo-so.jpg",
+    images: ["hang-mo-so.jpg", "hang-mo-so-2.jpg", "hang-mo-so-3.jpg"],
+    diachi: "Kiên Lương, An Giang",
+    loaihinh: "Du lịch lịch sử",
+    mota: "Hang Mo So là di tích lịch sử kết hợp danh thắng tự nhiên, có giá trị giáo dục truyền thống.",
+    diemnoibat: "Hệ thống hang động độc đáo, không gian tự nhiên và ý nghĩa lịch sử cách mạng.",
+    giave: "Miễn phí",
+    giomo: "07:00 - 17:00",
+    amthuc: "Bánh canh ghẹ, hải sản Kiên Lương",
+    khachsan: "Sele House, River Hotel",
+    goiy: "Phù hợp cho học sinh tham quan, học tập trải nghiệm và tìm hiểu lịch sử địa phương.",
+    audio_en: "Welcome to Mo So Cave in Kien Luong. This place is both a historical site and a natural landscape. The cave system is unique, with limestone formations and natural spaces that create a mysterious and impressive atmosphere. Mo So Cave also has historical value because it is connected with local revolutionary traditions. For students, this destination is meaningful because it helps them understand more about the history, courage, and spirit of the people in their homeland. Visitors can combine sightseeing with learning activities and local cultural experiences. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Hang%20Mo%20So%20Kiên%20Lương&output=embed"
+  },
+
+  "mui-nai": {
+    ten: "Bãi biển Mũi Nai - Hà Tiên",
+    anh: "mui-nai.jpg",
+    images: ["mui-nai.jpg", "mui-nai-2.jpg", "mui-nai-3.jpg"],
+    diachi: "Hà Tiên, An Giang",
+    loaihinh: "Du lịch biển",
+    mota: "Bãi biển Mũi Nai là điểm du lịch biển nổi tiếng của Hà Tiên, hấp dẫn bởi không gian thoáng mát và cảnh hoàng hôn đẹp.",
+    diemnoibat: "Bãi biển yên bình, khu vui chơi ven biển, hải sản tươi ngon và cảnh hoàng hôn lãng mạn.",
+    giave: "Khoảng 30.000 - 50.000 đồng",
+    giomo: "06:00 - 21:00",
+    amthuc: "Tôm tích, ghẹ hấp, sò huyết",
+    khachsan: "Mũi Nai Resort, River Hotel",
+    goiy: "Nên đi từ tháng 11 đến tháng 4 và kết hợp tham quan Thạch Động, Núi Đèn, chợ đêm Hà Tiên.",
+    audio_en: "Welcome to Mui Nai Beach in Ha Tien. This beach is one of the well-known seaside destinations in the southwestern region of Vietnam. It is famous for its relaxing atmosphere, beautiful sunset, seafood restaurants, and activities near the beach. Visitors can swim, take photos, enjoy fresh seafood, and spend time with family or friends. Mui Nai is also a good starting point for exploring other attractions in Ha Tien such as Thach Dong, Nui Den, and the night market. The best time to visit is from November to April when the weather is more comfortable. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Bãi%20biển%20Mũi%20Nai%20Hà%20Tiên&output=embed"
+  },
+
+  "phu-quoc": {
+    ten: "Đảo ngọc Phú Quốc",
+    anh: "phu-quoc.jpg",
+    images: ["phu-quoc.jpg", "phu-quoc-2.jpg", "phu-quoc-3.jpg"],
+    diachi: "Đặc khu Phú Quốc, An Giang",
+    loaihinh: "Du lịch biển đảo",
+    mota: "Phú Quốc là trung tâm du lịch biển đảo nổi tiếng hàng đầu Việt Nam, được biết đến với biển xanh, cát trắng và nhiều khu vui chơi hiện đại.",
+    diemnoibat: "Bãi Sao, Bãi Khem, Hòn Thơm, VinWonders, Safari, chợ đêm và hệ sinh thái biển phong phú.",
+    giave: "Tùy từng điểm tham quan",
+    giomo: "Mở cửa cả ngày",
+    amthuc: "Gỏi cá trích, nhum biển, bún quậy, hải sản tươi sống",
+    khachsan: "Vinpearl, Novotel, Seashells, Wyndham",
+    goiy: "Nên dành 3-5 ngày để khám phá trọn vẹn các điểm tham quan nổi bật.",
+    audio_en: "Welcome to Phu Quoc Island, also called the Pearl Island of Vietnam. Phu Quoc is one of the most famous island destinations in the country, known for its blue sea, white sand, beautiful beaches, modern entertainment areas, and fresh seafood. Visitors can explore Bai Sao, Bai Khem, Hon Thom cable car, night markets, amusement parks, and nature reserves. This island is suitable for families, young travelers, and international tourists who want to enjoy both relaxation and adventure. Local specialties such as herring salad, sea urchin, and fresh seafood are highly recommended. To fully enjoy Phu Quoc, visitors should spend three to five days on the island. Thank you for using the Smart An Giang Travel Guide.",
+    bando: "https://www.google.com/maps?q=Phú%20Quốc&output=embed"
+  }
+};
