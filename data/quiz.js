@@ -1,1 +1,5 @@
-// Dữ liệu câu hỏi trắc nghiệm sẽ được chuyển vào đây
+const quizData = {
+  1: "A",
+  2: "A",
+  3: "A"
+};
