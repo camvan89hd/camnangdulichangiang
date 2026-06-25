@@ -2,250 +2,155 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cẩm nang du lịch An Giang thông minh</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <header>
-    <div class="banner">
-        <div class="banner-overlay">
+<body id="top">
 
-            <div class="banner-content">
-
-                <h1>CẨM NANG DU LỊCH<br>AN GIANG THÔNG MINH</h1>
-
-                <p>
-                    Khám phá An Giang - Hiểu quê hương - Yêu đất nước
-                </p>
-
-                <div class="banner-buttons">
-
-                    <a href="#diemden" class="btn-banner">
-                        🗺️ Khám phá điểm đến
-                    </a>
-
-                    <a href="#amthuc" class="btn-banner">
-                        🍜 Khám phá ẩm thực
-                    </a>
-
-                    <a href="#tracnghiem" class="btn-banner">
-                        🧠 Trắc nghiệm vui
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
+<header class="hero">
+  <div class="hero-content">
+    <h1>CẨM NANG DU LỊCH<br>AN GIANG THÔNG MINH</h1>
+    <p>Khám phá An Giang – Hiểu quê hương – Yêu đất nước</p>
+    <div class="hero-buttons">
+      <a href="#diemden">🗺️ Khám phá điểm đến</a>
+      <a href="#lichtrinh">🧭 Gợi ý lịch trình</a>
+      <a href="#tracnghiem">🧠 Trắc nghiệm vui</a>
     </div>
+  </div>
 </header>
+
+<nav>
+  <a href="#top">Trang chủ</a>
+  <a href="#gioithieu">Giới thiệu</a>
+  <a href="#diemden">Điểm đến</a>
+  <a href="#bando">Bản đồ</a>
+  <a href="#lichtrinh">Lịch trình</a>
+  <a href="#tracnghiem">Trắc nghiệm</a>
+</nav>
+
 <section class="stats-section">
   <div class="stat-box">
-    <h3>15+</h3>
-    <h4>Điểm du lịch nổi bật</h4>
-    <p>Gồm các địa điểm tâm linh, sinh thái, lịch sử và văn hóa đặc sắc của An Giang.</p>
+    <h3>10+</h3>
+    <h4>Điểm đến nổi bật</h4>
+    <p>Tâm linh, sinh thái, biển đảo, lịch sử và văn hóa.</p>
   </div>
-
   <div class="stat-box">
     <h3>20+</h3>
     <h4>Món ăn đặc sản</h4>
-    <p>Giới thiệu những món ngon như bún cá Châu Đốc, bò Bảy Núi, gà đốt Ô Thum, thốt nốt.</p>
+    <p>Bún cá Châu Đốc, gà đốt Ô Thum, hải sản, thốt nốt.</p>
   </div>
-
   <div class="stat-box">
-    <h3>10+</h3>
-    <h4>Lễ hội truyền thống</h4>
-    <p>Cung cấp thông tin về các lễ hội văn hóa, tâm linh, phong tục đặc trưng địa phương.</p>
+    <h3>Song ngữ</h3>
+    <h4>Audio Guide</h4>
+    <p>Có thuyết minh tiếng Anh cho khách du lịch.</p>
   </div>
-
   <div class="stat-box">
-    <h3>1000+</h3>
-    <h4>Lượt khám phá</h4>
-    <p>Mục tiêu phục vụ học sinh, giáo viên, phụ huynh và du khách tìm hiểu An Giang.</p>
+    <h3>Maps</h3>
+    <h4>Bản đồ số</h4>
+    <p>Tích hợp bản đồ và chỉ đường Google Maps.</p>
   </div>
 </section>
-  <nav>
-    <nav>
-    <a href="#top">Trang chủ</a>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#diemden">Điểm đến</a>
-    <a href="#bando">Bản đồ số</a>
-    <a href="#amthuc">Ẩm thực</a>
-    <a href="#lichtrinh">Lịch trình</a>
-    <a href="#tracnghiem">Trắc nghiệm</a>
-    <a href="#qr">Mã QR</a>
-</nav>
 
-  <section id="gioithieu">
-    <h2>Giới thiệu sản phẩm</h2>
-    <p>
-      Website “Cẩm nang du lịch An Giang thông minh” giúp học sinh, người dân
-      và du khách tìm hiểu các điểm du lịch, di tích, danh lam thắng cảnh,
-      ẩm thực, lễ hội và văn hóa đặc trưng của An Giang.
-    </p>
-  </section>
+<section id="gioithieu">
+  <h2>Giới thiệu sản phẩm</h2>
+  <p>
+    Website “Cẩm nang du lịch An Giang thông minh” giúp học sinh, giáo viên,
+    người dân và du khách tìm hiểu các điểm đến tiêu biểu của An Giang thông qua
+    hình ảnh, bản đồ số, thông tin chi tiết, gợi ý lịch trình và thuyết minh tự động.
+  </p>
+</section>
 
- <section id="diemden">
+<section id="diemden">
   <h2>Điểm đến nổi bật</h2>
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="Nhập tên điểm du lịch cần tìm...">
-  <button onclick="timKiemDiaDiem()">Tìm kiếm</button>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Nhập tên điểm du lịch cần tìm...">
+    <button onclick="timKiemDiaDiem()">Tìm kiếm</button>
+    <button onclick="hienTatCaDiaDiem()">Hiện tất cả</button>
+  </div>
+
+  <div id="cardsContainer" class="cards"></div>
+</section>
+
 <section id="chitiet">
   <h2>Thông tin chi tiết</h2>
   <div id="noi-dung-chi-tiet">
-    <p>Nhấn vào nút “Xem chi tiết” ở mỗi điểm đến để đọc thêm thông tin.</p>
-  </div>
-</section>
-</div>
-  <div class="cards">
-    <div class="card">
-      <img src="mieu-ba-chua-xu.jpg" alt="Miếu Bà Chúa Xứ Núi Sam">
-      <h3>Miếu Bà Chúa Xứ Núi Sam</h3>
-      <p>Điểm du lịch tâm linh nổi tiếng, thu hút đông đảo du khách đến tham quan, chiêm bái.</p>
-<button onclick="xemChiTiet('mieu-ba-chua-xu')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="rung-tram-tra-su.jpg" alt="Rừng tràm Trà Sư">
-      <h3>Rừng tràm Trà Sư</h3>
-      <p>Khu du lịch sinh thái đặc sắc với rừng tràm xanh mát và hệ sinh thái phong phú.</p>
-<button onclick="xemChiTiet('rung-tram-tra-su')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="nui-cam.jpg" alt="Núi Cấm">
-      <h3>Núi Cấm</h3>
-      <p>Được mệnh danh là nóc nhà miền Tây, nổi bật với khí hậu mát mẻ và cảnh quan hùng vĩ.</p>
-<button onclick="xemChiTiet('nui-cam')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="cho-noi-long-xuyen.jpg" alt="Chợ nổi Long Xuyên">
-      <h3>Chợ nổi Long Xuyên</h3>
-      <p>Nét văn hóa sông nước đặc trưng, nơi du khách có thể trải nghiệm đời sống miền Tây.</p>
-<button onclick="xemChiTiet('cho-noi-long-xuyen')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="ho-ta-pa.jpg" alt="Hồ Tà Pạ">
-      <h3>Hồ Tà Pạ</h3>
-      <p>Địa điểm có khung cảnh nên thơ, nước hồ xanh trong, được nhiều bạn trẻ yêu thích.</p>
-<button onclick="xemChiTiet('ho-ta-pa')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="chua-hang.jpg" alt="Chùa Hang">
-      <h3>Chùa Hang</h3>
-      <p>Ngôi chùa gắn với cảnh quan núi đá, hang động và không gian tâm linh yên bình.</p>
-<button onclick="xemChiTiet('chua-hang')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="hon-phu-tu.jpg" alt="Hòn Phụ Tử">
-      <h3>Hòn Phụ Tử</h3>
-      <p>Danh thắng nổi tiếng vùng Kiên Lương, gắn với vẻ đẹp biển đảo và truyền thuyết dân gian.</p>
-<button onclick="xemChiTiet('hon-phu-tu')">Xem chi tiết</button>
-    </div>
-
-    <div class="card">
-      <img src="hang-mo-so.jpg" alt="Hang Mo So">
-      <h3>Hang Mo So</h3>
-      <p>Di tích lịch sử, danh thắng tự nhiên có giá trị giáo dục truyền thống cho học sinh.</p>
-<button onclick="xemChiTiet('hang-mo-so')">Xem chi tiết</button>
-    </div>
-<div class="card">
-    <img src="mui-nai.jpg" alt="Bãi biển Mũi Nai">
-    <h3>Bãi biển Mũi Nai - Hà Tiên</h3>
-    <p>Một trong những bãi biển đẹp nổi tiếng của vùng Tây Nam Bộ với cảnh hoàng hôn tuyệt đẹp.</p>
-    <button onclick="xemChiTiet('mui-nai')">Xem chi tiết</button>
-</div>
-
-<div class="card">
-    <img src="phu-quoc.jpg" alt="Đảo ngọc Phú Quốc">
-    <h3>Đảo ngọc Phú Quốc</h3>
-    <p>Thiên đường du lịch biển đảo với những bãi biển đẹp, khu vui chơi hiện đại và hệ sinh thái đa dạng.</p>
-    <button onclick="xemChiTiet('phu-quoc')">Xem chi tiết</button>
-</div>
+    <p>Nhấn vào nút “Xem chi tiết” ở mỗi điểm đến để khám phá thêm thông tin.</p>
   </div>
 </section>
 
-  <section id="bando">
-    <h2>Bản đồ số du lịch</h2>
-    <p>Bản đồ giúp người dùng xác định vị trí các điểm du lịch nổi bật.</p>
+<section id="bando">
+  <h2>Bản đồ du lịch An Giang</h2>
+  <iframe
+    src="https://www.google.com/maps?q=An%20Giang&output=embed"
+    width="100%"
+    height="360"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
 
-    <iframe 
-      src="https://www.google.com/maps?q=An%20Giang&output=embed"
-      width="100%" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </section>
-
-  <section id="amthuc">
-    <h2>Ẩm thực An Giang</h2>
-    <ul>
-      <li>Bún cá Châu Đốc</li>
-      <li>Gà đốt Ô Thum</li>
-      <li>Bò Bảy Núi</li>
-      <li>Đường thốt nốt</li>
-	<li>Các loại hải sản</li>
-    </ul>
-  </section>
-
-  <section id="lichtrinh">
+<section id="lichtrinh">
   <h2>Gợi ý lịch trình thông minh</h2>
-
-  <p>Chọn thời gian tham quan:</p>
 
   <select id="chonLichTrinh">
     <option value="1ngay">Du lịch 1 ngày</option>
     <option value="2ngay">Du lịch 2 ngày</option>
     <option value="tamlinh">Du lịch tâm linh</option>
     <option value="sinhthai">Du lịch sinh thái</option>
+    <option value="biendao">Du lịch biển đảo</option>
   </select>
 
   <button onclick="goiYlichTrinh()">Xem gợi ý</button>
-
   <div id="ketqua-lichtrinh"></div>
 </section>
 
-  <section id="tracnghiem">
+<section id="tracnghiem">
   <h2>Trắc nghiệm vui về An Giang</h2>
 
   <div class="quiz-question">
     <p><b>Câu 1:</b> Núi Cấm còn được gọi là gì?</p>
-    <button onclick="traLoi(1, 'A')">A. Nóc nhà miền Tây</button>
-    <button onclick="traLoi(1, 'B')">B. Biển xanh An Giang</button>
-    <button onclick="traLoi(1, 'C')">C. Thành phố nổi</button>
+    <button onclick="traLoi(1,'A')">A. Nóc nhà miền Tây</button>
+    <button onclick="traLoi(1,'B')">B. Thành phố nổi</button>
+    <button onclick="traLoi(1,'C')">C. Vịnh biển xanh</button>
   </div>
 
   <div class="quiz-question">
     <p><b>Câu 2:</b> Rừng tràm Trà Sư thuộc loại hình du lịch nào?</p>
-    <button onclick="traLoi(2, 'A')">A. Du lịch sinh thái</button>
-    <button onclick="traLoi(2, 'B')">B. Du lịch biển</button>
-    <button onclick="traLoi(2, 'C')">C. Du lịch công nghiệp</button>
+    <button onclick="traLoi(2,'A')">A. Sinh thái</button>
+    <button onclick="traLoi(2,'B')">B. Công nghiệp</button>
+    <button onclick="traLoi(2,'C')">C. Thương mại</button>
   </div>
 
   <div class="quiz-question">
     <p><b>Câu 3:</b> Miếu Bà Chúa Xứ Núi Sam nổi tiếng về loại hình nào?</p>
-    <button onclick="traLoi(3, 'A')">A. Du lịch tâm linh</button>
-    <button onclick="traLoi(3, 'B')">B. Du lịch hang động</button>
-    <button onclick="traLoi(3, 'C')">C. Du lịch biển đảo</button>
+    <button onclick="traLoi(3,'A')">A. Tâm linh</button>
+    <button onclick="traLoi(3,'B')">B. Biển đảo</button>
+    <button onclick="traLoi(3,'C')">C. Thể thao</button>
   </div>
 
   <button onclick="xemDiem()">Xem điểm</button>
-
   <p id="ketqua"></p>
 </section>
-  </section>
 
-  <footer>
-    <p>Sản phẩm dự thi: Cẩm nang du lịch An Giang thông minh</p>
-  </footer>
+<section id="qr">
+  <h2>Mã QR truy cập website</h2>
+  <p>Sau khi tạo mã QR, bạn đặt ảnh tên <b>qr-website.png</b> cùng thư mục với file HTML.</p>
+  <div class="qr-box">
+    <img src="qr-website.png" alt="Mã QR website">
+    <p>Quét mã QR để truy cập Cẩm nang du lịch An Giang thông minh.</p>
+  </div>
+</section>
 
-  <script src="script.js"></script>
-<body id="top">
+<button onclick="lenDauTrang()" id="btnTop">⬆</button>
+
+<footer>
+  <p>Sản phẩm dự thi: Cẩm nang du lịch An Giang thông minh</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
