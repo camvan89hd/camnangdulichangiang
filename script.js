@@ -269,49 +269,58 @@ let hangDoiDoc = [];
 let dangDoc = false;
 
 function ngheThuyetMinh(key) {
-    const data = duLieu[key];
+  const data = duLieu[key];
 
-    if (!data) {
-        alert("No information available.");
-        return;
-    }
+  if (!data) {
+    alert("No information available.");
+    return;
+  }
 
-    window.speechSynthesis.cancel();
+  window.speechSynthesis.cancel();
 
-    hangDoiDoc = data.audio_en
-        .split(".")
-        .map(cau => cau.trim())
-        .filter(cau => cau.length > 0);
+  hangDoiDoc = data.audio_en
+    .split(".")
+    .map(function(cau) {
+      return cau.trim();
+    })
+    .filter(function(cau) {
+      return cau.length > 0;
+    });
 
-    dangDoc = true;
-    docTiepTheo();
+  dangDoc = true;
+  docTiepTheo();
 }
 
 function docTiepTheo() {
-    if (!dangDoc || hangDoiDoc.length === 0) {
-        dangDoc = false;
-        return;
-    }
+  if (!dangDoc || hangDoiDoc.length === 0) {
+    dangDoc = false;
+    return;
+  }
 
-    const cau = hangDoiDoc.shift() + ".";
+  const cau = hangDoiDoc.shift() + ".";
 
-    const speech = new SpeechSynthesisUtterance(cau);
-    speech.lang = "en-US";
-    speech.rate = 0.9;
-    speech.pitch = 1;
-    speech.volume = 1;
+  const speech = new SpeechSynthesisUtterance(cau);
+  speech.lang = "en-US";
+  speech.rate = 0.9;
+  speech.pitch = 1;
+  speech.volume = 1;
 
-    speech.onend = function () {
-        docTiepTheo();
-    };
+  speech.onend = function() {
+    docTiepTheo();
+  };
 
-    speech.onerror = function () {
-        docTiepTheo();
-    };
+  speech.onerror = function() {
+    docTiepTheo();
+  };
 
-    window.speechSynthesis.speak(speech);
+  window.speechSynthesis.speak(speech);
 }
 
+function dungThuyetMinh() {
+  dangDoc = false;
+  hangDoiDoc = [];
+  window.speechSynthesis.cancel();
+}
 function timKiemDiaDiem() {
   const input = document.getElementById("searchInput").value.toLowerCase();
   const cards = document.getElementsByClassName("card");
